@@ -1,0 +1,134 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Hero.css
+───────────────────────────────────────────────────────────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent, transparent 3px,
+    rgba(255, 92, 26, 0.007) 3px, rgba(255, 92, 26, 0.007) 4px
+  );
+}
+
+.hero-name {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(54px, 11vw, 110px);
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.9);
+  line-height: 1.05;
+}
+/* Row that places the name + photo side by side */
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* Circular photo next to the name */
+.hero-photo {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow:
+    0 0 0 4px rgba(255, 92, 26, 0.15),
+    0 0 24px rgba(255, 92, 26, 0.4);
+}
+
+/* Restore the bottom margin on bio */
+.hero-bio {
+  max-width: 500px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  margin-bottom: 38px;
+}
+
+.hero-divider {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 22px auto;
+}
+
+.hero-subtitle {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  margin-bottom: 20px;
+}
+
+.hero-bio {
+  max-width: 500px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  margin-bottom: 38px;
+}
+
+.hero-bio .highlight {
+  background: var(--accent);
+  color: #000;
+  padding: 0 8px;
+  font-weight: 700;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #E2E8CE;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+
+.social-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 22px;
+}

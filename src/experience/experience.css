@@ -1,0 +1,77 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Experience.css
+───────────────────────────────────────────────────────────────────────────── */
+
+.experience-section {
+  padding: 80px 56px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+  margin-top: 52px;
+}
+
+.exp-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.015);
+  padding: 26px 32px;
+  transition: all 0.2s;
+}
+
+.exp-card.active {
+  border-color: rgba(255, 92, 26, 0.5);
+  background: rgba(255, 92, 26, 0.05);
+}
+
+.exp-card:hover {
+  border-color: var(--accent-glow);
+  background: rgba(255, 92, 26, 0.07);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.exp-role {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.exp-card.active .exp-role {
+  color: var(--accent);
+}
+
+.exp-period {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.exp-company {
+  font-family: var(--font);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.32);
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+}
+
+.exp-desc {
+  font-family: var(--font);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.56);
+  line-height: 1.8;
+}

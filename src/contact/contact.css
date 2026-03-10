@@ -1,0 +1,57 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Contact.css
+───────────────────────────────────────────────────────────────────────────── */
+
+.contact-section {
+  padding: 80px 56px 120px;
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-desc {
+  font-family: var(--font);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.012);
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contact-item:hover {
+  border-color: var(--accent-glow);
+  background: var(--accent-dim);
+}
+
+.contact-icon {
+  color: var(--accent);
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-val {
+  font-family: var(--font);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.56);
+  letter-spacing: 0.05em;
+}
