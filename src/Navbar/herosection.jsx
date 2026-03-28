@@ -1,4 +1,4 @@
-import './Hero.css';
+import './hero.css';
 import { useState, useEffect } from "react";
 
 export default function Hero() {

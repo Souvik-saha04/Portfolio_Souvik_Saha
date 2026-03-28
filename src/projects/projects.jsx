@@ -1,5 +1,5 @@
 // components/Projects.jsx
-import './Projects.css';
+import './projects.css';
 import SectionTitle from "../titlesection/titlesection";
 
 const PROJECTS = [
