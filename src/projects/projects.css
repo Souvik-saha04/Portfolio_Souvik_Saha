@@ -1,121 +1,289 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   Projects.css
+   Projects.css — vertical list layout matching reference
 ───────────────────────────────────────────────────────────────────────────── */
 
 .projects-section {
-  padding: 80px 56px;
-  max-width: 1100px;
+  padding: 100px 56px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.projects-grid {
+.projects-intro {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 15px;
+  color: rgba(240, 237, 232, 0.4);
+  margin-top: 16px;
+  max-width: 520px;
+}
+
+/* ── LIST ────────────────────────────────────────────────────────────────── */
+
+.projects-list {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── ROW ─────────────────────────────────────────────────────────────────── */
+
+.project-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3px;
-  text-align: left;
-  margin-top: 52px;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 64px 0;
+  border-top: 1px solid rgba(240, 237, 232, 0.07);
+  position: relative;
 }
 
-/* ── Card ─────────────────────────────────────────────────────────────────── */
-.project-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.012);
-  overflow: hidden;
-  transition: all 0.25s;
+.project-row:last-child {
+  border-bottom: 1px solid rgba(240, 237, 232, 0.07);
 }
 
-.project-card:hover {
-  border-color: var(--accent-glow);
-  background: rgba(255, 92, 26, 0.04);
+/* ── LEFT ────────────────────────────────────────────────────────────────── */
+
+.project-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
 }
 
-/* ── Thumbnail placeholder ────────────────────────────────────────────────── */
-.project-thumb {
-  height: 155px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 92, 26, 0.08) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+/* big faded number behind */
+.project-number {
+  position: absolute;
+  top: -10px;
+  left: -8px;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-weight: 700;
+  font-size: 120px;
+  color: rgba(232, 88, 10, 0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* categories */
+.project-categories {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-thumb-pattern {
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent, transparent 12px,
-    rgba(255, 92, 26, 0.025) 12px, rgba(255, 92, 26, 0.025) 13px
-  );
-}
-
-.project-thumb-icon {
+  gap: 4px;
+  margin-bottom: 14px;
   position: relative;
   z-index: 1;
-  color: rgba(255, 92, 26, 0.28);
-  font-size: 34px;
-  font-family: var(--font);
 }
 
-/* ── Body ─────────────────────────────────────────────────────────────────── */
-.project-body {
-  padding: 20px 22px 22px;
+.project-dot {
+  color: #e8580a;
+  font-size: 14px;
+  margin-right: 4px;
 }
 
+.project-category {
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: #e8580a;
+  text-transform: uppercase;
+}
+
+.project-cat-sep {
+  color: rgba(232, 88, 10, 0.5);
+}
+
+/* name */
 .project-name {
-  font-family: var(--font);
-  font-weight: 700;
-  font-size: 17px;
-  color: #fff;
-  margin-bottom: 10px;
-  letter-spacing: 0.06em;
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(36px, 4vw, 52px);
+  color: #e8580a;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.project-name.accent {
-  color: var(--accent);
-}
-
+/* desc */
 .project-desc {
-  font-family: var(--font);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.7;
-  margin-bottom: 16px;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(240, 237, 232, 0.55);
+  font-weight: 300;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* ── Tags ─────────────────────────────────────────────────────────────────── */
+/* portions */
+.project-portions-label {
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: rgba(240, 237, 232, 0.3);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.project-portions {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 13px;
+  color: rgba(240, 237, 232, 0.6);
+  margin-bottom: 22px;
+}
+
+/* tags */
 .project-tags {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
 }
 
 .project-tag {
-  padding: 3px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-family: var(--font);
-  font-weight: 600;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.42);
-  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border: 1px solid rgba(240, 237, 232, 0.1);
+  border-radius: 999px;
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(240, 237, 232, 0.45);
+  text-transform: uppercase;
+  background: rgba(240, 237, 232, 0.03);
 }
 
-/* ── Actions ──────────────────────────────────────────────────────────────── */
-.project-actions {
+/* link icons */
+.project-links {
   display: flex;
-  gap: 8px;
+  gap: 16px;
+  align-items: center;
 }
 
-.project-actions .btn {
-  flex: 1;
-  padding: 9px 0;
-  font-size: 11px;
+.project-link-icon {
+  color: rgba(240, 237, 232, 0.3);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.project-link-icon:hover {
+  color: #e8580a;
+}
+
+/* ── RIGHT: PREVIEW CARD ─────────────────────────────────────────────────── */
+
+.project-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-preview:hover {
+  transform: scale(1.02);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* big project name watermark inside preview */
+.project-preview-name {
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 72px);
+  color: rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.02em;
+  text-align: center;
+  padding: 0 24px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* arrow button overlaid in center */
+.project-preview-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 52px;
+  height: 52px;
+  background: rgba(10, 10, 10, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s;
+  z-index: 2;
+}
+
+.project-preview:hover .project-preview-arrow {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-preview-arrow:hover {
+  background: #e8580a;
+}
+
+/* "PROJECT PREVIEW" pill at bottom */
+.project-preview-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: rgba(240, 237, 232, 0.18);
+  border: 1px solid rgba(240, 237, 232, 0.25);
+  border-radius: 999px;
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: rgba(240, 237, 232, 0.8);
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-preview:hover .project-preview-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .projects-section {
+    padding: 80px 24px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 0;
+  }
+
+  .project-number {
+    font-size: 80px;
+  }
+
+  .project-preview {
+    aspect-ratio: 16 / 9;
+  }
 }

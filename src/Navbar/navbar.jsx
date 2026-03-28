@@ -1,19 +1,20 @@
 // components/Navbar.jsx
-
-import "./navbar.css";
+import "./Navbar.css";
 
 const NAV_LINKS = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
 
 export default function Navbar({ active, setActive }) {
   return (
     <nav className="navbar">
+
+      {/* Pill logo left */}
       <div className="navbar-logo">
-        <div className="navbar-icon">◈</div>
-        <span className="navbar-name">SOUVIK SAHA</span>
+        <span className="navbar-logo-text">SS<span className="navbar-logo-dot">.</span></span>
       </div>
 
+      {/* Center links */}
       <div className="navbar-links">
-        {NAV_LINKS.map(link => (
+        {NAV_LINKS.filter(l => l !== "CONTACT").map(link => (
           <a
             key={link}
             href={`#${link.toLowerCase()}`}
@@ -24,6 +25,16 @@ export default function Navbar({ active, setActive }) {
           </a>
         ))}
       </div>
+
+      {/* Contact pill button right */}
+      <a
+        href="#contact"
+        className={`navbar-contact${active === "CONTACT" ? " active" : ""}`}
+        onClick={() => setActive("CONTACT")}
+      >
+        CONTACT
+      </a>
+
     </nav>
   );
 }
