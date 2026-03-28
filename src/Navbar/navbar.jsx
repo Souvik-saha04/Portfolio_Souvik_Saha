@@ -1,5 +1,5 @@
 // components/Navbar.jsx
-import "./Navbar.css";
+import "./navbar.css";
 
 const NAV_LINKS = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
 
