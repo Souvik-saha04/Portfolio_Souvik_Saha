@@ -8,6 +8,7 @@ const CATEGORIES = [
   { key: "languages", label: "Languages"  },
   { key: "frontend",  label: "Frontend"   },
   { key: "backend",   label: "Backend"    },
+  { key: "ai",   label: "Generative and Agentic AI"    },
   { key: "databases", label: "Databases"  },
   { key: "datascience", label: "Data Science" },
   { key: "devtools",  label: "Dev Tools"  },
@@ -21,6 +22,8 @@ const TECH_ICONS = [
   { label: "C",          logo: "/logos/c.png",          fallback: "C",   category: "languages" },
   { label: "HTML5",      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",       fallback: "H5",  category: "languages" },
   { label: "CSS3",       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",        fallback: "CSS", category: "languages" },
+  { label: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", fallback: "TS", category: "languages" },
+  { label: "SQL",        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", fallback: "SQL", category: "languages" },
 
   // ── Frontend ─────────────────────────────────────────────────────────────────
   { label: "React",     logo: "/logos/react.png",     fallback: "⚛",  category: "frontend" },
@@ -28,11 +31,26 @@ const TECH_ICONS = [
   { label: "Vite",      logo: "/logos/vite.png",      fallback: "V",  category: "frontend" },
   { label: "Axios",     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain-wordmark.svg",     fallback: "Ax", category: "frontend" },
   { label: "Jest",      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",     fallback: "J",  category: "frontend" },
+  { label: "Next.js",   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", fallback: "Next", category: "frontend" },
+  { label: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg", fallback: "Bs", category: "frontend" },
+  { label: "Redux",     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg", fallback: "Rx", category: "frontend" },
+  { label: "Context API", logo: "/logos/react.png", fallback: "Ctx", category: "frontend" },
+
 
   // ── Backend ──────────────────────────────────────────────────────────────────
   { label: "Django",    logo: "/logos/django.png",    fallback: "Dj", category: "backend" },
   { label: "Nginx",     logo: "/logos/nginx.png",     fallback: "Ng", category: "backend" },
-  { label: "Langchain", logo: "/logos/langchain.jpg", fallback: "LC", category: "backend" },
+  { label: "Django REST Framework", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg", fallback: "DRF", category: "backend" },
+  { label: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg", fallback: "Fb", category: "backend" },
+
+  // ── AI / ML ──────────────────────────────────────────────────────────────────
+
+  { label: "Langchain", logo: "/logos/langchain.jpg", fallback: "LC", category: "ai" },
+  { label: "OpenAI", logo: "/logos/openai.png", fallback: "AI", category: "ai" },
+  { label: "Hugging Face", logo: "https://huggingface.co/front/assets/huggingface_logo.svg", fallback: "HF", category: "ai" },
+  { label: "Ollama", logo: "/logos/ollama.png", fallback: "Ol", category: "ai" },
+  { label: "FAISS", logo: "/logos/faiss.png", fallback: "Fs", category: "ai" },
+  { label: "Pinecone", logo: "/logos/pinecone.png", fallback: "Pc", category: "ai" },
 
   // ── Databases ────────────────────────────────────────────────────────────────
   { label: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",  fallback: "🐘",  category: "databases" },
@@ -52,7 +70,13 @@ const TECH_ICONS = [
   { label: "Figma",   logo: "/logos/figma.png",  fallback: "◐",  category: "devtools" },
   { label: "Vercel",  logo: "/logos/vercel.png", fallback: "▲",  category: "devtools" },
   { label: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",fallback: "Pm", category: "devtools" },
-];
+  { label: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", fallback: "🐳", category: "devtools" },
+  { label: "Render", logo: "/logos/render.png", fallback: "Rn", category: "devtools" },
+  { label: "Cursor AI", logo: "/logos/cursor.png", fallback: "Cu", category: "devtools" },
+  { label: "GitHub Copilot", logo: "/logos/copilot.png", fallback: "Co", category: "devtools" },
+  { label: "OpenCV", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg", fallback: "CV", category: "devtools" },
+  { label: "Selenium", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg", fallback: "Se", category: "devtools" },
+  ];
 
 export default function TechStack() {
   const [active, setActive] = useState("all");
