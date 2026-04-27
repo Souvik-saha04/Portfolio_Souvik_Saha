@@ -43,7 +43,7 @@ export default function Hero() {
         <a href="#projects" className="btn-primary">
           Explore Works <span className="arrow">↗</span>
         </a>
-        <a href="/autoCV_(2).pdf" download="souvik_saha_cv.pdf" className="btn-outline">
+        <a href="/CV_27_04_2026.pdf" download="souvik_saha_cv.pdf" className="btn-outline">
           Download CV ↓
         </a>
       </div>

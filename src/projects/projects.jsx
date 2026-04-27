@@ -4,77 +4,69 @@ import SectionTitle from "../titlesection/titlesection";
 
 const PROJECTS = [
   {
-    id: "01",
-    categories: ["AI", "FULL-STACK"],
-    name: "OmniAI",
-    desc: "Chat with documents and websites through intelligent AI conversations. Get instant answers from your content with state-of-the-art language models.",
-    portions: ["Document Chat", "Web Scraping", "Multi-modal AI"],
-    tags: ["Next.js", "TypeScript", "Tailwind", "Gemini"],
-    demo: "https://omniai.demo",
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-    previewBg: "#0f3460",
-  },
+  id: "01",
+  categories: ["AI", "FULL-STACK"],
+  name: "GreenGrocers",
+  desc: "GreenGrocers is a full-stack e-commerce platform for fresh produce and daily essentials, featuring secure authentication, product management, cart and order processing, and real-time workflows. It integrates an AI-powered bargaining system that enables dynamic price negotiation, enhancing user engagement and personalization.",
+  
+  portions: [
+    "E-commerce System",
+    "AI Bargaining Engine",
+    "User Authentication",
+    "Cart & Order Management"
+  ],
+
+  tags: [
+    "React",
+    "Vite",
+    "CSS3",
+    "Django",
+    "Django REST Framework",
+    "Python",
+    "REST API"
+  ],
+
+  demo: "https://greengrocers-one.vercel.app/",
+  github: "https://github.com/Souvik-saha04/citadel",
+
+  gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
+  previewBg: "#0f3460",
+},
   {
-    id: "02",
-    categories: ["AI", "SAAS"],
-    name: "CareerWise",
-    desc: "AI interview prep with mock sessions, real-time feedback, and personalised guidance. Built with Next.js, Prisma and Gemini for a seamless experience.",
-    portions: ["Mock Interviews", "AI Feedback", "Career Analytics"],
-    tags: ["Next.js", "Prisma", "TypeScript", "MongoDB"],
-    demo: "https://careerwise.demo",
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #2d1b69 0%, #11998e 100%)",
-    previewBg: "#11998e",
-  },
-  {
-    id: "03",
-    categories: ["AI", "AUTOMATION"],
-    name: "AI Resume Builder",
-    desc: "Automated CV generation, cover letter creation, payment integration and analytics dashboard for a subscription-based service at scale.",
-    portions: ["CV Generation", "Cover Letters", "Stripe Payments"],
-    tags: ["TypeScript", "React", "Stripe", "OpenAI", "Prisma"],
-    demo: null,
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    previewBg: "#f5576c",
-  },
-  {
-    id: "04",
-    categories: ["SECURITY", "FULL-STACK"],
-    name: "SecureLife",
-    desc: "Comprehensive digital security platform with end-to-end encryption, secure file storage, and identity protection built for enterprise scale.",
-    portions: ["E2E Encryption", "Secure Storage", "Identity Shield"],
-    tags: ["Go", "React", "Docker", "AWS"],
-    demo: "https://securelife.demo",
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
-    previewBg: "#1a1a1a",
-  },
-  {
-    id: "05",
-    categories: ["PRODUCTIVITY", "DEV TOOLS"],
-    name: "DevBoard",
-    desc: "Developer productivity dashboard with GitHub integration, task tracking, and team collaboration features designed for modern engineering teams.",
-    portions: ["GitHub Sync", "Task Tracking", "Team Collaboration"],
-    tags: ["Next.js", "GraphQL", "Postgres"],
-    demo: null,
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    previewBg: "#764ba2",
-  },
-  {
-    id: "06",
-    categories: ["SPORTS", "REAL-TIME"],
-    name: "BigDash League",
-    desc: "Real-time sports analytics platform with live score tracking, player statistics, and fantasy league management powered by event-driven architecture.",
-    portions: ["Live Scores", "Player Stats", "Fantasy League"],
-    tags: ["React", "Node.js", "Redis", "Kafka"],
-    demo: "https://bigdash.demo",
-    github: "https://github.com",
-    gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
-    previewBg: "#f7971e",
-  },
+  id: "02",
+  categories: ["AI", "FULL-STACK"],
+  name: "CornPDF AI",
+  
+  desc: "CornPDF AI is an intelligent document question-answering system that allows users to upload PDFs and interact with them using natural language. It leverages embeddings, vector search, and LLMs to provide accurate, context-aware responses from document content, with secure Firebase-based authentication and a scalable backend architecture.",
+
+  portions: [
+    "PDF Upload & Management",
+    "Document Q&A (Chat with PDFs)",
+    "Vector Search & Embeddings",
+    "Authentication System"
+  ],
+
+  tags: [
+    "React",
+    "Vite",
+    "CSS3",
+    "Django",
+    "Django REST Framework",
+    "Python",
+    "LangChain",
+    "FAISS",
+    "Pinecone",
+    "Firebase Auth",
+    "LLMs",
+    "REST API"
+  ],
+
+  demo: "https://github.com/Souvik-saha04/cornPDF.git",
+  github: "https://github.com/Souvik-saha04/cornPDF.git",
+
+  gradient: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+  previewBg: "#203a43",
+},
 ];
 
 export default function Projects() {
